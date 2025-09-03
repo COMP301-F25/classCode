@@ -6,27 +6,26 @@ public class Main {
         Point b = new Point(1,2);
         Point c = new Point(2,0);
 
-        Point d = new Point(3,2);
-        Point e = new Point(4.0,0);
-
+        Point d = new Point(2,0);
+        Point e = new Point(3,2);
+        Point f = new Point(4.0,0);
 
         //Both triangles are identical
         Triangle first = new PointTriangle(a,b,c);
-        Triangle second = new PointTriangle(c,d,e);
+        Triangle second = new PointTriangle(d,e,f);
         System.out.println(first);
         System.out.println(first.getPerimeter());
         System.out.println(second);
         System.out.println(second.getPerimeter());
 
 
-//        //Move the first
-//        first.transpose(2,0);
-//
-//        //triangles are no longer identical
-//        System.out.println(first);
-//        System.out.println(first.getPerimeter());
-//        System.out.println(second);
-//        System.out.println(second.getPerimeter());
+        //Move the first
+        first.transpose(2,0);
+
+        System.out.println(first);
+        System.out.println(first.getPerimeter());
+        System.out.println(second);
+        System.out.println(second.getPerimeter());
 
 
     }

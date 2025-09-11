@@ -1,4 +1,4 @@
-package edu.unc.comp301.composition;
+package edu.unc.comp301.composition.interfaces;
 
 public interface C {
     void methodC1();

@@ -1,6 +1,6 @@
 package edu.unc.comp301.drinks;
 
 public interface AddOn {
-    String getDescription();
-    double getUpCharge();
+    public String getDescription();
+    public double getUpcharge();
 }

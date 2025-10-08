@@ -1,9 +1,9 @@
 package edu.unc.comp301.drinks;
 
-public class MilkChoice implements AddOn {
-    private String milk;
+public class MilkChoicre implements AddOn{
+    private final String milk;
 
-    public MilkChoice(String milk){
+    public MilkChoicre(String milk){
         this.milk = milk;
     }
 
@@ -13,7 +13,7 @@ public class MilkChoice implements AddOn {
     }
 
     @Override
-    public double getUpCharge() {
+    public double getUpcharge() {
         return 1.0;
     }
 }

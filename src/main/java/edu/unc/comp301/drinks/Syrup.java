@@ -1,8 +1,8 @@
 package edu.unc.comp301.drinks;
 
-public class Syrup implements AddOn{
-    private int pumps;
-    private String name;
+public class Syrup implements AddOn {
+    private final int pumps;
+    private final String name;
 
     public Syrup(String name, int pumps){
         this.name = name;
@@ -15,7 +15,7 @@ public class Syrup implements AddOn{
     }
 
     @Override
-    public double getUpCharge() {
-        return .5 * pumps;
+    public double getUpcharge() {
+        return 0.5 * this.pumps;
     }
 }

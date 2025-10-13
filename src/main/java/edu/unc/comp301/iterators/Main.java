@@ -2,6 +2,7 @@ package edu.unc.comp301.iterators;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main {
@@ -30,12 +31,25 @@ public class Main {
 
 
         //System Scanner for input
-        s = new Scanner(System.in);
-        while(s.hasNext()) {
-            Scanner innerScanner = new Scanner(s.nextLine());
-            while (innerScanner.hasNext()){
-                System.out.println(innerScanner.next());
-            }
+//        s = new Scanner(System.in);
+//        while(s.hasNext()) {
+//            Scanner innerScanner = new Scanner(s.nextLine());
+//            while (innerScanner.hasNext()){
+//                System.out.println(innerScanner.next());
+//            }
+//        }
+
+
+
+        MyLinkedList<Integer> myList = new MyLinkedList();
+        myList.add(5);
+        myList.add(4);
+        myList.add(42);
+
+        Iterator<Integer> i = myList.iterator();
+
+        while(i.hasNext()){
+            System.out.println(i.next());
         }
 
     }

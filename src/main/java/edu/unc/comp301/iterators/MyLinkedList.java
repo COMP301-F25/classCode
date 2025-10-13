@@ -1,12 +1,14 @@
 package edu.unc.comp301.iterators;
 
+import java.util.Iterator;
+
 /**
- * A class that implements the MyList<E> interface using a linked list of nodes.
+ * A class that implements the MyList interface using a linked list of nodes.
  *
  * @author Prairie Goodwin
  * @version 1.1
  */
-public class MyLinkedList<E> implements MyList<E>{
+public class MyLinkedList<E> implements MyList<E>, Iterable<E>{
     /* A reference to the first node on the list */
     private Node<E> headNode = null;
     /* Keeps track of the list's size */
@@ -17,7 +19,7 @@ public class MyLinkedList<E> implements MyList<E>{
      * Written as an inner class so we can easily access 
      * the list's private fields.
      */
-    private class MyLinkedListItr implements MyIterator<E> {
+    private class MySuperSecretEncapsulatedIterator implements Iterator<E> {
         /* next node to be visited by the iterator */
         private Node<E> nextNode;
 
@@ -26,7 +28,7 @@ public class MyLinkedList<E> implements MyList<E>{
          * 
          * @return the new iterator
          */
-        MyLinkedListItr(){
+        MySuperSecretEncapsulatedIterator(){
             this.nextNode = MyLinkedList.this.headNode;
         }
 
@@ -56,7 +58,6 @@ public class MyLinkedList<E> implements MyList<E>{
 
     /**
      * List constructor.
-     * @return an empty list.
      */
     public MyLinkedList(){ }
 
@@ -203,7 +204,7 @@ public class MyLinkedList<E> implements MyList<E>{
      *
      * @param elem the element whose presence is to be tested.
      * @return true if the element is present in the collection; false otherwise.
-     */   
+     */
     public boolean contains(E elem){
         return this.indexOf(elem) != -1;
     }
@@ -222,11 +223,12 @@ public class MyLinkedList<E> implements MyList<E>{
     }
 
     /**
-     * Returns an iterator that lets us traverse the collection.
-     *
-     * @return an iterator object associated with the collection.
+     * The required iterable method to return a super secret iterator type.s
+     * @return myIterator
      */
-    public MyIterator<E> iterator(){
-        return new MyLinkedListItr();
+    public Iterator<E> iterator(){
+        return new MySuperSecretEncapsulatedIterator();
     }
+
+
 }

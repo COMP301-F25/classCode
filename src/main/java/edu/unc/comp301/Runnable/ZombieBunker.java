@@ -33,7 +33,9 @@ public class ZombieBunker {
         ZombieBunker bunker = new ZombieBunker();
 
         for (int i = 1; i <= 5; i++) {
-            new Survivor(bunker, "Survivor-" + i).start();
+            Runnable survivor =  new Survivor(bunker, "Survivor-" + i);
+            Thread thread = new Thread(survivor);
+            thread.start();
             Thread.sleep(300); // Survivors arrive one at a time
         }
 

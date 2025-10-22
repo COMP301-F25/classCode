@@ -1,6 +1,6 @@
 package edu.unc.comp301.Runnable;
 
-public class Survivor extends Thread {
+public class Survivor implements Runnable {
     private final ZombieBunker bunker;
     private final String name;
 

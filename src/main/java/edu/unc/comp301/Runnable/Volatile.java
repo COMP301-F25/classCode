@@ -2,7 +2,7 @@ package edu.unc.comp301.Runnable;
 
 public class Volatile {
     //Add Volatile keyword to ensure proper memory checking
-    private static boolean flag = false;
+    private static volatile boolean flag = false;
 
     public static void main(String[] args) {
         //Inline lambda expression

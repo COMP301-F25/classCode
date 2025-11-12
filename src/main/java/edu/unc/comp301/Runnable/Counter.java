@@ -16,7 +16,7 @@ public class Counter {
         value = getValue() - 1;
     }
 
-    public synchronized int getValue() {
+    public int getValue() {
         return value;
     }
 

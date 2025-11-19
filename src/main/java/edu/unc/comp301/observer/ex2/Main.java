@@ -14,11 +14,32 @@ public class Main {
     UNCFan tar_heel = new UNCFan();
     DukeFan dookie = new DukeFan();
 
+    //Whole cladss
+    //Prof prairie = new Prof();
+
+    //As a lambda expresion
+//    Fan prairie = (Game game)->{
+//        if (game.whoIsWinning().equals("UNC") || game.whoIsWinning().equals("NCState")) {
+//          System.out.println("Prof Prairie: Go Sportsteam!");
+//        }
+//    };
+
+    Fan prairie = new Fan(){
+      private String name = "Prairie";
+
+      @Override
+      public void update(Game game) {
+        if (game.whoIsWinning().equals("UNC") || game.whoIsWinning().equals("NCState")) {
+          System.out.println(this.name + ": Go Sportsteam!");
+        }
+      }
+    };
 
     // Register observers
     for (Game g : games) {
       g.addObserver(tar_heel);
       g.addObserver(dookie);
+      g.addObserver(prairie);
     }
 
 

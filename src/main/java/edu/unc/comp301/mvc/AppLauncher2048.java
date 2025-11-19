@@ -16,8 +16,8 @@ public class AppLauncher2048 extends Application {
         Controller controller = new ControllerImpl(model);
 
         //View
-        View view = new View(model, controller);
-        model.addObservers();
+        View view = new View(stage, model, controller);
+        model.addObserver(view);
         // Make scene
         Scene scene = new Scene(view.render(), 200,300);
         stage.setScene(scene);

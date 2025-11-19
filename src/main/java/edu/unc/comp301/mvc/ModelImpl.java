@@ -76,4 +76,5 @@ public class ModelImpl implements Model {
         }
         score = 0;
     }
+
 }

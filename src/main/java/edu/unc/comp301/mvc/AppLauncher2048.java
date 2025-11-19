@@ -10,10 +10,10 @@ import java.util.List;
 public class AppLauncher2048 extends Application {
     @Override
     public void start(Stage stage) {
-        View view = new View();
+        // Make view
+
         // Make scene
-        Scene scene = new Scene(view.render(),300, 500);
-        stage.setScene(scene);
+
 
         // Show the stage
         stage.setTitle("MVC Example");

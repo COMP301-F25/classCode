@@ -7,7 +7,6 @@ import edu.unc.comp301.mvc.model.Model;
 import edu.unc.comp301.mvc.model.ModelImpl;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 public class AppLauncher2048 extends Application {
@@ -16,7 +15,7 @@ public class AppLauncher2048 extends Application {
 
         Model model = new ModelImpl();
         Controller controller = new ControllerImpl(model);
-        View view = new View(stage, model, controller);
+        View view = new View(stage, model);
         model.addObserver(view);
 
         //title

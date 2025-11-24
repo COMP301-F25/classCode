@@ -3,23 +3,17 @@ package edu.unc.comp301.mvc.view;
 import edu.unc.comp301.mvc.controller.Controller;
 import edu.unc.comp301.mvc.model.Model;
 import edu.unc.comp301.mvc.model.Observer;
-import javafx.event.ActionEvent;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.shape.VLineTo;
 import javafx.stage.Stage;
 
 public class View implements FXComponent, Observer {
-    private final Controller controller;
     private final Model model;
     private final Stage stage;
 
 
-    public View(Stage stage, Model model, Controller controller){
-        this.controller = controller;
+    public View(Stage stage, Model model){
         this.model = model;
         this.stage = stage;
     }

@@ -1,4 +1,4 @@
-package edu.unc.comp301.mvc;
+package edu.unc.comp301.mvc.model;
 
 public interface Model extends Subject {
     int getTile(int x, int y);
@@ -6,9 +6,9 @@ public interface Model extends Subject {
     int getBestScore();
     boolean isGameOver();
 
-    void swipeUp();
     void swipeLeft();
-    void swipeDown();
     void swipeRight();
+    void swipeUp();
+    void swipeDown();
     void reset();
 }

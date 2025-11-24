@@ -1,7 +1,9 @@
-package edu.unc.comp301.mvc;
+package edu.unc.comp301.mvc.controller;
 
-public class ControllerImpl implements Controller{
-    private Model model;
+import edu.unc.comp301.mvc.model.Model;
+
+public class ControllerImpl implements Controller {
+    private final Model model;
 
     public ControllerImpl(Model model){
         this.model = model;
@@ -9,18 +11,18 @@ public class ControllerImpl implements Controller{
 
     @Override
     public void swipe(Direction d) {
-        switch(d) {
+        switch(d){
             case UP:
                 model.swipeUp();
                 break;
             case DOWN:
                 model.swipeDown();
                 break;
-            case LEFT:
-                model.swipeLeft();
-                break;
             case RIGHT:
                 model.swipeRight();
+                break;
+            case LEFT:
+                model.swipeLeft();
                 break;
         }
     }

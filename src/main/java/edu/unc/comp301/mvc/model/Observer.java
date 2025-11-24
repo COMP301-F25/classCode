@@ -1,4 +1,4 @@
-package edu.unc.comp301.mvc;
+package edu.unc.comp301.mvc.model;
 
 public interface Observer {
     void update();

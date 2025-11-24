@@ -1,4 +1,4 @@
-package edu.unc.comp301.mvc;
+package edu.unc.comp301.mvc.controller;
 
 public interface Controller {
     void swipe(Direction d);

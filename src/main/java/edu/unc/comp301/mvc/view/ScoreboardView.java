@@ -8,17 +8,18 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 
-
 public class ScoreboardView implements FXComponent{
-    private Model model;
+    Model model;
 
     public ScoreboardView(Model model){
         this.model = model;
     }
+
+
     @Override
     public Parent render() {
-        Pane scoreBoard = new HBox();
-        scoreBoard.getStyleClass().add("scoreboard");
+        Pane scoreboard = new HBox();
+        scoreboard.getStyleClass().add("scoreboard");
 
         Pane logoContainer = new HBox();
         Label logo = new Label("2048");
@@ -26,9 +27,8 @@ public class ScoreboardView implements FXComponent{
         HBox.setHgrow(logoContainer, Priority.ALWAYS);
         logoContainer.getChildren().add(logo);
 
-        scoreBoard.getChildren().add(logoContainer);
+        scoreboard.getChildren().add(logoContainer);
 
-        // current score
         Pane score = new VBox();
         score.getStyleClass().add("score");
         Label scoreLabel = new Label("SCORE");
@@ -38,10 +38,9 @@ public class ScoreboardView implements FXComponent{
         Label scoreValue = new Label("" + model.getCurrentScore());
         scoreValue.getStyleClass().add("score-value");
         score.getChildren().add(scoreValue);
-        scoreBoard.getChildren().add(score);
 
+        scoreboard.getChildren().add(score);
 
-        // best score
         Pane best = new VBox();
         best.getStyleClass().add("score");
         Label highScoreLabel = new Label("BEST");
@@ -51,11 +50,8 @@ public class ScoreboardView implements FXComponent{
         Label highScoreValue = new Label("" + model.getBestScore());
         highScoreValue.getStyleClass().add("score-value");
         best.getChildren().add(highScoreValue);
+        scoreboard.getChildren().add(best);
 
-        scoreBoard.getChildren().add(best);
-
-
-        return scoreBoard;
-
+        return scoreboard;
     }
 }

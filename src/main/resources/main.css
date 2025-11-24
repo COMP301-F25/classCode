@@ -17,13 +17,14 @@
   -fx-background-color: #ecc400;
   -fx-pref-width: 60px;
   -fx-pref-height: 60px;
-  -fx-border-radius: 4px;
   -fx-background-radius: 4px;
   -fx-font-size: 22px;
   -fx-alignment: center;
 }
 
 .score {
+  -fx-pref-width: 60px;
+  -fx-pref-height: 60px;
   -fx-background-color: #bbada1;
   -fx-background-radius: 4px;
   -fx-padding: 10;
@@ -47,7 +48,6 @@
 }
 
 
-
 .board {
   -fx-background-color: #bbada1;
   -fx-padding: 10px;
@@ -64,6 +64,7 @@
   -fx-text-fill: #ffffff;
   -fx-background-color: #f1d04c;
 }
+
 
 .tile-0 {
   -fx-background-color: #cbc0b4;

@@ -7,6 +7,7 @@ import edu.unc.comp301.mvc.model.Model;
 import edu.unc.comp301.mvc.model.ModelImpl;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 public class AppLauncher2048 extends Application {
@@ -25,10 +26,8 @@ public class AppLauncher2048 extends Application {
         Scene scene = new Scene(view.render(),350,450);
         scene.getStylesheets().add("main.css");
 
-        stage.setScene(scene);
-
-        scene.setOnKeyPressed(event -> {
-            switch (event.getCode()) {
+        scene.setOnKeyPressed(event ->{
+            switch (event.getCode()){
                 case UP:
                     controller.swipe(Direction.UP);
                     break;
@@ -42,9 +41,12 @@ public class AppLauncher2048 extends Application {
                     controller.swipe(Direction.RIGHT);
                     break;
                 default:
-                    // Ignore all other keys
+                    //Ignore all others
             }
         });
+
+        stage.setScene(scene);
+
 
 
         stage.show();

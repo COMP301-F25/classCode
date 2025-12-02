@@ -42,12 +42,6 @@ public class ModelImpl implements Model{
     }
 
     @Override
-    public void shuffleSongs() {
-        Collections.shuffle(playlist);
-        notifyObservers();
-    }
-
-    @Override
     public void addObserver(ModelObserver observer) {
         observers.add(observer);
     }

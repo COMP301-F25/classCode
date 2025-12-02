@@ -5,10 +5,9 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
-import org.comp301.spotify.mvcspotify.Controller.Controller;
-import org.comp301.spotify.mvcspotify.Model.Model;
-import org.comp301.spotify.mvcspotify.Model.Song;
-
+import edu.unc.comp301.mvcspotify.Model.*;
+import edu.unc.comp301.mvcspotify.Controller.*;
+import edu.unc.comp301.mvcspotify.View.*;
 public class SongView implements FXComponent {
   private final int songIndex;
   private final Controller controller;

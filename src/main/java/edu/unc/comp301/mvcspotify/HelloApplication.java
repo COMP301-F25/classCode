@@ -3,12 +3,11 @@ package edu.unc.comp301.mvcspotify;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.comp301.spotify.mvcspotify.Controller.Controller;
-import org.comp301.spotify.mvcspotify.Controller.ControllerImpl;
-import org.comp301.spotify.mvcspotify.Model.Model;
-import org.comp301.spotify.mvcspotify.Model.ModelImpl;
-import org.comp301.spotify.mvcspotify.Model.SongImpl;
-import org.comp301.spotify.mvcspotify.View.View;
+
+import edu.unc.comp301.mvcspotify.Model.*;
+import edu.unc.comp301.mvcspotify.Controller.*;
+import edu.unc.comp301.mvcspotify.View.*;
+
 
 import java.io.IOException;
 

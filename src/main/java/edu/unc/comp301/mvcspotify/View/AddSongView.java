@@ -7,7 +7,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
-import org.comp301.spotify.mvcspotify.Controller.Controller;
+import edu.unc.comp301.mvcspotify.Model.*;
+import edu.unc.comp301.mvcspotify.Controller.*;
+import edu.unc.comp301.mvcspotify.View.*;
 
 public class AddSongView implements FXComponent {
     private final Controller controller;

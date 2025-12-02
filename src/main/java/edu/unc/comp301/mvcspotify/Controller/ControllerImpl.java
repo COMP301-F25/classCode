@@ -1,7 +1,8 @@
 package edu.unc.comp301.mvcspotify.Controller;
 
-import org.comp301.spotify.mvcspotify.Model.Model;
-import org.comp301.spotify.mvcspotify.Model.SongImpl;
+import edu.unc.comp301.mvcspotify.Model.*;
+import edu.unc.comp301.mvcspotify.Controller.*;
+import edu.unc.comp301.mvcspotify.View.*;
 
 public class ControllerImpl implements Controller{
     private Model model;
@@ -35,8 +36,5 @@ public class ControllerImpl implements Controller{
         model.removeSong(index);
     }
 
-    @Override
-    public void shuffleSongs() {
-        model.shuffleSongs();
-    }
+
 }

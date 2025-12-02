@@ -1,4 +1,4 @@
-package edu.unc.comp301.mvc.view;
+package edu.unc.comp301.mvc2048.view;
 
 import javafx.scene.Parent;
 import javafx.scene.control.Label;

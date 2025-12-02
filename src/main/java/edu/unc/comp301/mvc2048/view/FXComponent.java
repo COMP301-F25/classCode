@@ -1,6 +1,5 @@
-package edu.unc.comp301.mvc.view;
+package edu.unc.comp301.mvc2048.view;
 
-import edu.unc.comp301.mvc.model.Observer;
 import javafx.scene.Parent;
 
 public interface FXComponent{

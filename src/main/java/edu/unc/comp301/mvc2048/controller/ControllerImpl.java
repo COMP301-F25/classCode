@@ -1,6 +1,6 @@
-package edu.unc.comp301.mvc.controller;
+package edu.unc.comp301.mvc2048.controller;
 
-import edu.unc.comp301.mvc.model.Model;
+import edu.unc.comp301.mvc2048.model.Model;
 
 public class ControllerImpl implements Controller {
     private final Model model;

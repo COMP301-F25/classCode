@@ -95,3 +95,12 @@
 .tile-64 {
   -fx-background-color: #e95839;
 }
+
+.training-button{
+
+  -fx-background-color:red;
+  -fx-text-fill: white;
+  -fx-font-size: 20px;
+  -fx-font-weight: bold;
+
+}

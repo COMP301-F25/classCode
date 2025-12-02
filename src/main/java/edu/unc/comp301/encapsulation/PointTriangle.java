@@ -6,10 +6,10 @@ public class PointTriangle implements Triangle{
     private Point b;
     private Point c;
 
-    public PointTriangle(){
-        this.a = new Point(0,0);
-        this.b = new Point(1,0);
-        this.c = new Point (2,2);
+    public PointTriangle(Point a, Point b, Point c){
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
 
     @Override
